@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class PrefabReference : MonoBehaviour
+namespace TFT.PrefabBasedSaveSystem
 {
-    public GameObject GotPrefab;
-    public bool getGUID;
-    public string PrefabGUID;
-
-    private void Update()
+    [ExecuteInEditMode]
+    public class PrefabReference : MonoBehaviour
     {
-        if(getGUID)
+        public GameObject GotPrefab;
+        public bool getGUID;
+        public string PrefabGUID;
+
+        private void Update()
         {
-            string prefabPath = AssetDatabase.GetAssetPath(GotPrefab);
-            PrefabGUID = AssetDatabase.AssetPathToGUID(prefabPath);
-            getGUID = false;
+            if (getGUID)
+            {
+                string prefabPath = AssetDatabase.GetAssetPath(GotPrefab);
+                PrefabGUID = AssetDatabase.AssetPathToGUID(prefabPath);
+                getGUID = false;
+            }
         }
     }
 }
