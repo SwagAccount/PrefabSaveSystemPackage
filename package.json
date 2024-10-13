@@ -1,0 +1,10 @@
+{
+  "name": "com.tft.prefabsavesystem",
+  "version": "1.0.0",
+  "displayName": "Prefab Based Save System",
+  "description": "A save system that doesn't require many extra steps and uses GUIDs and prefabs to save values to json for you",
+  "unity": "2022.2",
+  "author": {
+	"name": "Jack Humberstone"
+  }
+}
